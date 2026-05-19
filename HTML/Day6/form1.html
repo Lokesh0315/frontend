@@ -1,0 +1,140 @@
+<html>
+
+<head>College Admission Form</head>
+
+<body>
+    <h1>College Admission Form</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label>Date of Birth</label>
+        <input type="date"><br><br>
+
+        <label>Aadhaar Number *</label>
+        <input type="text" placeholder="XXXX XXXX XXXX" pattern="[0-9]{12}" required>
+        <br><br>
+
+        <legend>Gender</legend>
+
+        <input type="radio" name="gender" class="inline" required> Male
+
+        <input type="radio" name="gender" class="inline"> Female
+        <br><br>
+        <legend>Course Selection</legend>
+
+        <label>Select Degree *</label>
+
+        <select required>
+
+            <option value="">--Select Degree--</option>
+
+            <option>B.E</option>
+            <option>B.Tech</option>
+            <option>B.Sc</option>
+            <option>BCA</option>
+            <option>B.Com</option>
+            <br><br>
+        </select>
+        <br><br>
+        <label>Select Department *</label>
+
+        <select required>
+
+            <option value="">--Select Department--</option>
+
+            <option>ECE</option>
+            <option>CSE</option>
+            <option>EEE</option>
+            <option>IT</option>
+            <option>MECH</option>
+            <option>CIVIL</option>
+
+        </select>
+        <br><br>
+        <label>Preferred Shift</label>
+
+        <select>
+
+            <option>Morning</option>
+            <option>Evening</option>
+
+        </select>
+        <br><br>
+        <legend>Academic Information</legend>
+
+        <label>12th Standard School Name *</label>
+        <input type="text" placeholder="Enter school name" required>
+        <br><br>
+        <label>Board of Education *</label>
+
+        <select required>
+
+            <option value="">--Select Board--</option>
+
+            <option>State Board</option>
+            <option>CBSE</option>
+            <option>ICSE</option>
+
+        </select>
+
+        <br><br><label>12th Percentage *</label>
+        <input type="number" min="35" max="100" placeholder="Enter percentage" required>
+
+        <label>Year of Passing *</label>
+        <input type="number" min="2018" max="2026" required>
+        <br><br>
+
+        <legend>Address Details</legend>
+
+        <label>Permanent Address *</label>
+
+        <textarea rows="5" placeholder="Enter full address" required></textarea>
+        <br><br>
+        <label>City *</label>
+        <input type="text" required>
+        <br><br>
+        <label>State *</label>
+        <input type="text" required>
+        <br><br>
+        <label>Pincode *</label>
+        <input type="text" pattern="[0-9]{6}" required>
+        <br><br>
+        <legend>Upload Documents</legend>
+
+        <label>Upload Passport Size Photo *</label>
+        <input type="file" accept="image/*" required>
+
+        <br><br>
+        <label>Upload 10th Marksheet *</label>
+        <input type="file" required>
+        <br><br>
+        <label>Upload 12th Marksheet *</label>
+        <input type="file" required>
+        <br><br>
+        <label>Upload Transfer Certificate</label>
+        <input type="file">
+        <br><br>
+        <legend>Additional Facilities</legend>
+
+        <input type="checkbox" class="inline"> Hostel Required
+
+        <input type="checkbox" class="inline"> Transport Required
+
+        <input type="checkbox" class="inline"> Scholarship Required
+        <br><br>
+        <div class="button-group">
+
+            <input type="submit" value="Submit Application" class="btn">
+
+            <input type="reset" value="Clear Form" class="btn">
+
+        </div>
+
+</html>

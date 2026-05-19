@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label>Date of Birth</label>
+        <input type="date"><br><br>
+
+        <label>Gender</label><br>
+
+        <input type="radio" name="gender" class="gender"> Male
+        <input type="radio" name="gender" class="gender"> Female
+        <br><br>
+
+        <label>Hobbies</label><br>
+
+        <input type="checkbox" class="hobbies"> Reading
+        <input type="checkbox" class="hobbies"> Music
+        <input type="checkbox" class="hobbies"> Sports
+        <input type="checkbox" class="hobbies"> Coding
+
+        <br><br>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value=""></option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="React">React</option>
+        </select><br><br>
+        <label>Address</label>
+
+        <textarea rows="5" placeholder="Enter your address"></textarea>
+        <br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+
+</html>
