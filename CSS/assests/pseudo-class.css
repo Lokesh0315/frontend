@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{  
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.child-one{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.child-two{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+}
+.child-two:hover{
+    background-color: pink;
+    color: blue
+}
+.text{
+    
+    color: white
+}
+

@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{  
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.parent{
+    background-color:rgb(228, 203, 174);
+    padding: 20px;
+    
+
+}
+
+.parent-one{
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 20px;
+    
+}
+.child-one{
+    display: flex;
+}
+.child-one img{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.change,.remove{
+    background-color: orangered;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
