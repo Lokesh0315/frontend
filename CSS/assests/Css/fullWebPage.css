@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+h1,
+h2 {
+    text-align: center;
+}
+
+
+#header {
+    background: black;
+    color: white;
+    padding: 20px;
+
+
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+#header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+
+.hero {
+    padding-top: 120px;
+    text-align: center;
+    height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+}
+
+.title {
+    margin: 30px 0;
+}
+
+
+.box {
+    width: 300px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 5px solid black;
+    background: lightblue;
+    text-align: center;
+}
+
+
+.flex-container {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.flex-item {
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: orange;
+    color: white;
+    font-size: 30px;
+}
+
+
+.grid-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.grid-item {
+    background: purple;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+
+.cards>.card {
+    background: white;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: 0.5s;
+}
+
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: red;
+    transition: 0.5s;
+}
+
+.card::after {
+    content: "★";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover::before {
+    left: 0;
+}
+
+.cards .card:nth-child(2) {
+    background: lightyellow;
+}
+
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: red;
+}
+
+
+input[type="text"],
+input[type="email"] {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border: 3px solid blue;
+    outline: none;
+}
+
+
+.position-demo {
+    margin-top: 50px;
+}
+
+.parent {
+    width: 300px;
+    height: 200px;
+    background: lightgreen;
+
+    position: relative;
+    margin: 30px auto;
+}
+
+.child-box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+
+    position: absolute;
+    top: 50px;
+    left: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero h2 {
+    animation: slideDown 2s infinite alternate;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+
+@media(max-width:768px) {
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

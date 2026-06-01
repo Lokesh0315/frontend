@@ -15,48 +15,44 @@ body {
 }
 
 
-.profCard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #111;
-    
-}
 
 .card {
     position: relative;
-    width: 300px;
-    background: white;
+    width: 320px;
     padding: 30px;
     border-radius: 20px;
+    background: white;
     text-align: center;
-    
+    overflow: hidden;
+    transition: 0.5s;
 }
+
 
 .card::before {
     content: "";
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     background: linear-gradient(red, orange);
-    top: -100px;
-    left: -100px;
     border-radius: 50%;
+    top: -120px;
+    left: -120px;
     transition: 1s;
 }
+
 
 .card::after {
     content: "";
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     background: linear-gradient(blue, cyan);
-    bottom: -100px;
-    right: -100px;
     border-radius: 50%;
+    bottom: -120px;
+    right: -120px;
     transition: 1s;
 }
+
 
 .card:hover::before {
     transform: rotate(360deg);
@@ -66,16 +62,49 @@ body {
     transform: rotate(-360deg);
 }
 
-img {
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+.profile-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
     position: relative;
     z-index: 1;
 }
 
 h2,
-p {
+p,
+button {
     position: relative;
     z-index: 1;
+}
+
+h2 {
+    margin-top: 15px;
+    color: #222;
+}
+
+p {
+    color: gray;
+    margin: 10px 0 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
 }
