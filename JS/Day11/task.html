@@ -1,0 +1,77 @@
+<script>
+
+const heroes = ["Vijay","Ajith","Suriya"];
+let upperHeroes = heroes.map(hero => hero.toUpperCase());
+console.log(upperHeroes);
+
+const collections = [100,200,300,400];
+let multiply = collections.map(collection => collection * 10);
+console.log(multiply);
+
+const collection1 = [100,500,800,200,900];
+let highCollection = collection1.filter(value => value > 500);
+console.log(highCollection);
+
+const marks = [35,80,20,90,45];
+let passed = marks.filter(mark => mark >= 35);
+console.log(passed);
+
+const heroes2 = ["Vijay","Ajith","Suriya"];
+let findHero = heroes2.find(hero => hero === "Ajith");
+console.log(findHero);
+
+const heroes3 = ["Vijay","Ajith","Suriya"];
+let heroIndex = heroes3.findIndex(hero => hero === "Suriya");
+console.log(heroIndex);
+
+const marks1 = [35,80,20,90];
+let failed = marks1.some(mark => mark < 35);
+console.log(failed);
+
+const marks2 = [50,70,90,40];
+let allPassed = marks2.every(mark => mark >= 35);
+console.log(allPassed);
+
+const collections4 = [100,200,300,400];
+let total = collections4.reduce((sum,value)=>{
+    return sum + value;
+},0);
+console.log(total);
+
+const students = [
+    {
+        id:1,
+        name:"Sudhan"
+    },
+
+    {
+        id:2,
+        name:"Rahul"
+    }
+
+];
+
+let studentNames = students.map(student => student.name);
+console.log(studentNames);
+
+const students1 = [
+    {
+        id:1,
+        age:20
+    },
+
+    {
+        id:2,
+        age:30
+    },
+
+    {
+        id:3,
+        age:18
+    }
+
+];
+let ageFilter = students1.filter(student => student.age > 20);
+console.log(ageFilter);
+
+</script>

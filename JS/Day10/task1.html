@@ -1,0 +1,117 @@
+<script>
+
+    let name="Lokesh S"
+    name = "Lokesh"
+    console.log(name);
+    
+// ----------------------------------------------
+
+if(true){
+   let userName="Lokesh" 
+}
+// console.log(userName);
+// userName is not defined -> Outside the block let and const cannot be run
+
+// ----------------------------------------------
+
+const course="JS"
+// course="React"
+// console.log(course);
+// Assignment to constant variable-> We can only Initialization in const. We can't able to redeclare and reassign the values in const
+
+// ----------------------------------------------
+
+let greet=()=>{
+    console.log("Welcome to JavaScript");
+    
+}
+greet() 
+
+// ----------------------------------------------
+
+let showHero=(heroName)=>{
+    console.log("Hero Name :",heroName);
+    
+}
+showHero("Vijai") 
+
+// ----------------------------------------------
+
+let add=(a,b)=>{
+    console.log(a+b);
+    
+}
+add(10,20) 
+
+// ----------------------------------------------
+
+let hero = "Vijay";
+console.log(`My Favourite Hero is ${hero}`);
+
+// ----------------------------------------------
+
+let name1="Lokesh"
+let course1="Frontend"
+let city="Chennai"
+console.log(`${name1},${course1},${city}`);
+
+// ----------------------------------------------
+
+let heroes=["Vijay","Ajith","Suriya"]
+let [hero1,hero2,hero3]=heroes
+console.log(hero1,hero2);
+
+// ----------------------------------------------
+
+let object={
+   name2:"Sudhan",
+   course2:"MERN",
+   city:"Chennai"
+}
+let {name2, course2}=object
+console.log(name,course);
+
+// ----------------------------------------------
+
+let array1=["HTML","CSS","JavaScript"]
+let array2=[...array1, "React"]
+console.log(array2);
+
+// ----------------------------------------------
+
+let array3=["Vijay","Ajith"]
+let array4=["Suriya","SK"]
+console.log(...array3,...array4);
+
+// ----------------------------------------------
+
+let object1={
+   name:"Sudhan",
+   city:"Chennai"
+}
+let object2={...object1, course: "Mern"}
+console.log(object2);
+
+// ----------------------------------------------
+
+function sum(...numbers){
+    console.log(numbers);
+    
+}
+sum(10,20,30,40)
+
+// ----------------------------------------------
+
+function sum(...numbers1){
+    let total=0
+    for (let num of numbers1){
+        total+=num
+    }
+
+    console.log(total);
+}
+sum(10,20,30,40,50)
+
+
+
+</script>

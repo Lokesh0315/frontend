@@ -1,0 +1,111 @@
+<script>
+
+let courses = ["HTML","CSS","JavaScript"];
+
+courses.push("React");
+
+courses.push("Node.js");
+
+console.log(courses);
+
+// ----------------------------------------------
+
+let skills = ["HTML","CSS","JavaScript","React"];
+
+let removedElement = skills.pop();
+
+console.log("Removed Element:", removedElement);
+console.log("Updated Array:", skills);
+
+// ----------------------------------------------
+
+let fruits = ["Apple","Mango","Orange","Banana"];
+
+let removedFruit = fruits.shift();
+
+console.log("Removed Fruit:", removedFruit);
+console.log("Updated Array:", fruits);
+
+// ----------------------------------------------
+
+let heros = ["Ajith","Suriya","SK"];
+
+heros.unshift("Vijay");
+
+heros.unshift("Dhanush");
+
+console.log(heros);
+
+// ----------------------------------------------
+
+let array=["HTML","CSS","Bootstrap","React"]
+array.splice(2,1,"JavaScript")
+console.log(array);
+
+// ----------------------------------------------
+
+let array2=["HTML","CSS","JavaScript","React","Node"]
+let newarray=array2.slice(2,4)
+console.log(newarray);
+console.log(array2);
+
+// ----------------------------------------------
+
+let student = {
+
+   name:"Sudhan",
+
+   course:"MERN",
+
+   city:"Chennai",
+
+   age:25
+
+};
+for(let key in student){
+    console.log(key+":"+student[key]);
+    
+}
+
+// ----------------------------------------------
+
+let array3=[
+   {
+      name:"Vijay",
+      movie:"GOAT"
+   },
+
+   {
+      name:"Ajith",
+      movie:"Vidaamuyarchi"
+   },
+
+   {
+      name:"Suriya",
+      movie:"Kanguva"
+   }
+]
+for (let key of array3){
+    console.log(key.name +"-"+key.movie);
+    
+}
+
+// ----------------------------------------------
+
+let array4=["Vijay","Ajith","Suriya","SK"]
+console.log(array4.join("|"));
+
+// ----------------------------------------------
+
+let array5=["HTML","CSS","JavaScript","React"]
+for(let i=0; i<array5.length; i++){
+    if(array5[i]==="React"){
+        console.log("Course Found");
+        
+    }else{
+        console.log("Course Not Found");
+        
+    }
+}
+
+</script>

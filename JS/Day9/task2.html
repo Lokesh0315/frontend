@@ -1,0 +1,129 @@
+<script>
+
+    let hero = "Vijay";
+    function displayhero(){
+        console.log(hero);
+        
+    }
+    displayhero()
+
+    if(true){
+        console.log(hero);
+        
+    }
+
+    for(let i=0;i<1;i++){
+        console.log(hero);
+
+    }
+
+// ----------------------------------------------
+
+const movie = ()=>{
+   let collection = 800;
+}
+// console.log(collection);
+// collection is not defined-> outside the block let and const cannot be run
+// ----------------------------------------------
+
+if(true){
+
+   var actor1 = "Ajith";
+
+   let actor2 = "Vijay";
+
+}
+console.log(actor1);
+// console.log(actor2);
+// actor2 is not defined-> outside the block let and const cannot be run
+
+// ----------------------------------------------
+
+function showName(Movie){
+    console.log(Movie + " movie released");
+     
+}
+function greet(callback){
+    callback("GOAT")
+}
+greet(showName)
+
+// ----------------------------------------------
+
+const add = (a,b)=>{
+    console.log(a+b);
+    
+}
+add(5,10)
+
+// ----------------------------------------------
+
+function greet1(callback){
+    console.log(callback);
+    
+}
+greet(function(){
+    console.log("Booking Confirmed");
+    
+})
+
+// ----------------------------------------------
+
+setTimeout(()=>{
+    console.log("Movie Started");
+    
+},2000)
+
+// ----------------------------------------------
+
+function processOrder(callback){
+    console.log("Order Received");
+    callback()
+}
+function delivered(){
+    console.log("Order Delivered");
+    
+}
+processOrder(delivered)
+
+// ----------------------------------------------
+
+function counter(){
+    let count=0
+    return function inner(){
+        count++
+        console.log(count);
+        
+    } 
+}
+
+let result=counter()
+result()
+result()
+result()
+
+// ----------------------------------------------
+
+function bank(){
+    let balance=0;
+    return{
+        deposit(amount){
+            balance+=amount
+        },
+        withdrawl(amount){
+            balance-=amount
+        },
+        check(){
+            console.log(balance);
+            
+        }
+    }
+}
+let account=bank()
+account.deposit(1000);
+account.check()
+account.withdrawl(300)
+account.check()
+
+
+</script>

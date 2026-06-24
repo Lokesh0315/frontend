@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Toggle Box</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+  <div class="flex flex-col gap-4 items-center mt-8">
+
+    <button id="Button" 
+      class="bg-blue-600 text-white p-3 rounded-lg transition duration-700 mb-2 w-50">
+      Click to hide
+    </button>
+
+
+    <div id="myBox" 
+      class="bg-blue-600 text-white p-3 rounded-lg transition duration-700 w-75 h-50 opacity-100 scale-100">
+
+      <p class="text-center">
+        content
+      </p>
+
+    </div>
+
+  </div>
+
+
+<script>
+
+// const btn = document.getElementById("Button");
+// const box = document.getElementById("myBox");
+
+// let isVisible = true;
+
+
+// btn.addEventListener("click", () => {
+
+//   if(isVisible){
+
+//     box.classList.remove("opacity-100","scale-100");
+
+//     box.classList.add("opacity-0","scale-95","pointer-events-none");
+//     isVisible = false;
+//   }
+  
+//   else{
+//     box.classList.remove("opacity-0", "scale-95", "pointer-events-none");
+//     box.classList.add("opacity-100","scale-100");
+//     isVisible = true;
+
+//   }
+// });
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Tasks</title>
+</head>
+
+<body>
+
+<h1 id="title">
+   Welcome
+</h1>
+
+
+<p class="course">
+   React
+</p>
+
+
+<input id="username" type="text">
+
+
+<img id="hero" src="old.jpg">
+
+
+<a id="website" href="#">
+   Visit
+</a>
+
+
+
+<script>
+
+let heading = document.getElementById("title");
+heading.innerText = "Welcome to JavaScript DOM";
+
+
+let paragraph = document.querySelector(".course");
+paragraph.innerText = "MERN Stack";
+
+
+let input = document.getElementById("username");
+input.value = "Sudhan";
+
+
+let image = document.querySelector("#hero");
+image.src = "new.jpg";
+
+
+let link = document.getElementById("website");
+link.href = "https://google.com";
+
+
+
+document.getElementById("title").innerText = "Hello JavaScript";
+document.querySelector(".content").innerText = "Learning DOM Concepts";
+document.getElementById("name").value = "Sudhan";
+
+</script>
+
+
+</body>
+</html>
