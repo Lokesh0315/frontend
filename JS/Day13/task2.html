@@ -1,11 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM Event Tasks</title>
 </head>
+
 <body>
-    
+
+
+<!-- Task 1 -->
+
+<input id="heroInput" type="text">
+
+<button onclick="showHero()">Show Hero</button>
+
+<h2 id="heroName"></h2>
+
+
+
+<!-- Task 2 -->
+
+<p id="para1">This is a paragraph</p>
+
+<button onclick="hidePara()">Hide</button>
+
+
+
+<!-- Task 3 -->
+
+<p id="para2" style="display:none;">
+    Hidden Paragraph
+</p>
+
+<button onclick="showPara()">Show</button>
+
+
+
+<!-- Task 4 -->
+
+<p id="togglePara">
+    Toggle Paragraph
+</p>
+
+<button onclick="togglePara()">Toggle</button>
+
+
+
+<!-- Task 5 -->
+
+<input id="username" type="text">
+
+<button onclick="checkUser()">Login</button>
+
+<h3 id="userResult"></h3>
+
+
+
+<!-- Task 6 -->
+
+<input id="password" type="password">
+
+<button onclick="checkPassword()">Check Password</button>
+
+<h3 id="passResult"></h3>
+
+
+
+<!-- Task 7 -->
+
+<input id="first" type="text">
+
+<input id="last" type="text">
+
+<button onclick="fullName()">Show Name</button>
+
+<h2 id="nameResult"></h2>
+
+
+
+<!-- Task 9 -->
+
+<h1 id="heading">
+    Welcome
+</h1>
+
+<button onclick="changeHeading()">
+    Change
+</button>
+
+
+
+<!-- Task 10 -->
+
+<input id="valueInput">
+
+<button onclick="submitForm()">
+    Submit
+</button>
+
+<h3 id="formResult"></h3>
+
+
+
+<!-- Task 11 -->
+
+<button onclick="counter()">
+    Click
+</button>
+
+<h2 id="count">
+0
+</h2>
+
+
+
+<script>
+
+
+// Task 1
+
+function showHero(){
+
+    let hero = document.getElementById("heroInput").value;
+
+    document.getElementById("heroName").innerText = hero;
+
+}
+
+
+
+// Task 2
+
+function hidePara(){
+
+    document.getElementById("para1").style.display="none";
+
+}
+
+
+
+// Task 3
+
+function showPara(){
+
+    document.getElementById("para2").style.display="block";
+
+}
+
+
+
+// Task 4
+
+function togglePara(){
+
+    let para = document.getElementById("togglePara");
+
+
+    if(para.style.display=="none"){
+
+        para.style.display="block";
+
+    }
+    else{
+
+        para.style.display="none";
+
+    }
+
+}
+
+
+
+// Task 5
+
+function checkUser(){
+
+    let user = document.getElementById("username").value;
+
+
+    if(user=="admin"){
+
+        document.getElementById("userResult").innerText="Login Success";
+
+    }
+    else{
+
+        document.getElementById("userResult").innerText="Invalid User";
+
+    }
+
+}
+
+
+
+// Task 6
+
+function checkPassword(){
+
+    let pass = document.getElementById("password").value;
+
+
+    if(pass.length>=8){
+
+        document.getElementById("passResult").innerText="Strong Password";
+
+    }
+    else{
+
+        document.getElementById("passResult").innerText="Weak Password";
+
+    }
+
+}
+
+
+
+// Task 7
+
+function fullName(){
+
+    let first = document.getElementById("first").value;
+
+    let last = document.getElementById("last").value;
+
+
+    document.getElementById("nameResult").innerText =
+    first + " " + last;
+
+}
+
+
+
+// Task 8
+
+function changeImage(){
+
+    document.getElementById("image").src="new.jpg";
+
+}
+
+
+
+// Task 9
+
+function changeHeading(){
+
+    let head = document.getElementById("heading");
+
+
+    head.innerText="JavaScript DOM";
+
+    head.style.color="red";
+
+}
+
+
+
+// Task 10
+
+function submitForm(){
+
+    let value = document.getElementById("valueInput").value;
+
+
+    if(value==""){
+
+        document.getElementById("formResult").innerText=
+        "Please Enter Value";
+
+    }
+    else{
+
+        document.getElementById("formResult").innerText=
+        "Form Submitted";
+
+    }
+
+}
+
+
+
+// Task 11
+
+let count = 0;
+
+
+function counter(){
+
+    count++;
+
+    document.getElementById("count").innerText=count;
+
+}
+
+
+</script>
+
+
 </body>
 </html>
