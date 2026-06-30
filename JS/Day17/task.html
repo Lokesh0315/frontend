@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FetchData</title>
+</head>
+<body>
+
+
+    <script>
+
+        const Datatake=async()=>{
+            const datas=await fetch("https://dummyjson.com/recipes")
+            const res=await datas.json()
+            const recipe=res.recipes
+            console.log(recipe);
+
+            let container=document.getElementById("container")
+
+            .forEach((e,i)=>{
+                container.innerHTML += `
+                <tr>
+                    <td>id</td>
+                <td>name</td>
+                <td>incredients</td>
+                </tr>
+
+                
+                `
+            })
+            
+        }
+        Datatake()
+    </script>
+</body>
+</html>

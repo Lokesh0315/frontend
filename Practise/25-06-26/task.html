@@ -1,8 +1,80 @@
 <script>
 
-    let arr=[1,2,3,4,5,6,6,4,5];
-    let unique=arr.filter((item, index)=>arr.indexOf(item)===index);
-    console.log(unique);
+
+let arr=[1,2,3,4,5,6,6,4,5];
+let unique=arr.filter((item, index)=>arr.indexOf(item)===index);
+console.log(unique);
+
     
+const numbers = [10,45,22,78,56,78,34];
+function secondLargest(numbers){
+let unique = [...new Set(numbers)];
+    unique.sort((a,b)=>b-a);
+    return unique[1];
+}
+console.log(secondLargest(numbers));
+
+
+const word = "javascript";
+function charFrequency(word){
+let result = {};
+    for(let char of word){
+        if(result[char]){
+            result[char]++;
+        }
+        else{
+            result[char]=1;
+        }
+    }
+    return result;
+}
+console.log(charFrequency(word));
+
+
+const numbers1 = [1,2,3,4,6,7,8,9,10];
+function findMissing(numbers1){
+    let n = numbers1.length + 1;
+    let total = n*(n+1)/2;
+    let sum = 0;
+    for(let num of numbers1){
+        sum += num;
+    }
+    return total - sum;
+}
+console.log(findMissing(numbers1));
+
+
+const word1 = "aabbccddefg";
+function firstNonRepeated(word1){
+    let count = {};
+    for(let char of word1){
+        count[char] = (count[char] || 0) + 1;
+    }
+    for(let char of word1){
+        if(count[char] === 1){
+            return char;
+        }
+    }
+}
+console.log(firstNonRepeated(word1));
+
+
+const arr1 = [10,20,30,40];
+const arr2 = [10,20,30,40];
+
+
+function checkArray(arr1,arr2){
+    if(arr1.length !== arr2.length){
+        return "Arrays are Not Equal";
+    }
+    for(let i=0;i<arr1.length;i++){
+        if(arr1[i] !== arr2[i]){
+            return "Arrays are Not Equal";
+        }
+    }
+    return "Arrays are Equal";
+}
+console.log(checkArray(arr1,arr2));
+
 
 </script>
